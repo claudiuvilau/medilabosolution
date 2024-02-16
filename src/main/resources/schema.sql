@@ -8,11 +8,11 @@ CREATE TABLE IF NOT EXISTS patients (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     nom VARCHAR(20) NOT NULL,
 	prenom VARCHAR(20) NOT NULL,
-	date_de naissance DATE NOT NULL,
+	date_de_naissance DATE NOT NULL,
 	genre CHAR(1) NOT NULL,
-	adresse VARCHAR(20) NOT NULL,
-	telephone VARCHAR(20) NOT NULL,
-    PRIMARY KEY (id),
+	adresse VARCHAR(20) NULL,
+	telephone VARCHAR(20) NULL,
+    PRIMARY KEY (id)
 )
 ENGINE=INNODB;
 
