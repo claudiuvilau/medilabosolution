@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MedilabosolutionApplication<medilabosolution>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.openclassrooms.medilabosolution.MedilabosolutionApplication",
+            "projectName": "medilabosolution",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+
+    ]
+}
