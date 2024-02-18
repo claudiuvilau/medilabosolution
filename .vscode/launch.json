@@ -9,7 +9,16 @@
             "projectName": "medilabosolution",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PatientApplication<patient>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.patient.PatientApplication",
+            "projectName": "patient",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
-
     ]
 }
