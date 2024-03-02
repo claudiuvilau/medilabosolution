@@ -57,12 +57,11 @@ public class SpringSecurityConfig {
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
                 http
-
                                 .authorizeHttpRequests(authorize -> authorize
                                                 .anyRequest()
                                                 .authenticated())
                                 .formLogin(login -> login
-                                                .defaultSuccessUrl("/app/login/ok", true)
+                                                .defaultSuccessUrl("/ListPatients", true)
                                                 .permitAll())
                                 .logout(logout -> logout
                                                 .logoutUrl("/app/app-logout")

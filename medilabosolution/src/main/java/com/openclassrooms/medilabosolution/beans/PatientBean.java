@@ -1,4 +1,4 @@
-package com.patient.model;
+package com.openclassrooms.medilabosolution.beans;
 
 import java.time.LocalDate;
 
@@ -9,11 +9,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "patients")
-public class Patient {
+public class PatientBean {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,7 +28,7 @@ public class Patient {
     private String prenom;
 
     @Column(name = "date_de_naissance")
-    @NotNull(message = "Account is mandatory")
+    @NotBlank(message = "Account is mandatory")
     private LocalDate dateNaissance;
 
     @Column(name = "genre")
@@ -42,10 +41,10 @@ public class Patient {
     @Column(name = "telephone")
     private String telephone;
 
-    public Patient() {
+    public PatientBean() {
     }
 
-    public Patient(Integer id, @NotBlank(message = "Account is mandatory") String nom,
+    public PatientBean(Integer id, @NotBlank(message = "Account is mandatory") String nom,
             @NotBlank(message = "Account is mandatory") String prenom,
             @NotBlank(message = "Account is mandatory") LocalDate dateNaissance,
             @NotBlank(message = "Account is mandatory") String genre, String adresse, String telephone) {

@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS patients (
 	prenom VARCHAR(20) NOT NULL,
 	date_de_naissance DATE NOT NULL,
 	genre CHAR(1) NOT NULL,
-	adresse VARCHAR(20) NULL,
+	adresse VARCHAR(50) NULL,
 	telephone VARCHAR(20) NULL,
     PRIMARY KEY (id)
 )
