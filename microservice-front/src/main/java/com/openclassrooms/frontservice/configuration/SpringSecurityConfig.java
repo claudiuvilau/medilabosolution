@@ -1,4 +1,4 @@
-package com.openclassrooms.medilabosolution.configuration;
+package com.openclassrooms.frontservice.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -61,7 +61,7 @@ public class SpringSecurityConfig {
                                                 .anyRequest()
                                                 .authenticated())
                                 .formLogin(login -> login
-                                                .defaultSuccessUrl("/ListPatients", true)
+                                                .defaultSuccessUrl("/Accueil", true)
                                                 .permitAll())
                                 .logout(logout -> logout
                                                 .logoutUrl("/app/app-logout")

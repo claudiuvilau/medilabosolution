@@ -30,6 +30,16 @@
             "projectName": "gateway",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-FrontserviceApplication<frontservice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.openclassrooms.frontservice.FrontserviceApplication",
+            "projectName": "frontservice",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }

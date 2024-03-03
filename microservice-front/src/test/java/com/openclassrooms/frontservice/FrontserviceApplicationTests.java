@@ -1,10 +1,10 @@
-package com.openclassrooms.medilabosolution;
+package com.openclassrooms.frontservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MedilabosolutionApplicationTests {
+class FrontserviceApplicationTests {
 
 	@Test
 	void contextLoads() {

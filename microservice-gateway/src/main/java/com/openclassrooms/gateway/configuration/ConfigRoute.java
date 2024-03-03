@@ -8,11 +8,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ConfigRoute {
 
-    @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
-        return builder.routes()
-                .route("r1", r -> r.path("/*Patient*/**")
-                        .uri("http://localhost:8082"))
-                .build();
-    }
+        @Bean
+        public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+                return builder.routes()
+                                .route("r_path_patient", r -> r.path("/*Patient*/**")
+                                                .uri("http://localhost:8082"))
+                                .route("r_ui", r -> r.path("/Accueil")
+                                                .uri("http://localhost:9090"))
+                                .build();
+        }
 }

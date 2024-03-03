@@ -1,4 +1,4 @@
-package com.openclassrooms.medilabosolution.beans;
+package com.openclassrooms.frontservice.beans;
 
 import java.time.LocalDate;
 
