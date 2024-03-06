@@ -42,7 +42,7 @@
 					<td style="width: 20%" th:text="${user.adresse}"></td>
 					<td style="width: 15%" th:text="${user.telephone}"></td>
 					<td style="width: 15%" class="text-center">
-						<a th:href="@{/user/update/{id}(id=${user.id})}">Edit</a>&nbsp;|&nbsp;
+						<a th:href="@{/MAJPatient/{id}(id=${user.id})}">Edit</a>&nbsp;|&nbsp;
 						<a th:href="@{/user/delete/{id}(id=${user.id})}">Delete</a>
 					</td>
 				</tr>

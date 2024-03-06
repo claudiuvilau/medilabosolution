@@ -9,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "patients")
@@ -28,7 +29,7 @@ public class PatientBean {
     private String prenom;
 
     @Column(name = "date_de_naissance")
-    @NotBlank(message = "Account is mandatory")
+    @NotNull(message = "Account is mandatory")
     private LocalDate dateNaissance;
 
     @Column(name = "genre")

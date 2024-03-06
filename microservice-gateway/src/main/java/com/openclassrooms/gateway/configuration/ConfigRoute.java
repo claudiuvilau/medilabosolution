@@ -11,10 +11,13 @@ public class ConfigRoute {
         @Bean
         public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
                 return builder.routes()
-                                .route("r_path_patient", r -> r.path("/*Patient*/**")
+                                .route("r_path_patient", r -> r.path("/Patient*/**", "/Patients")
                                                 .uri("http://localhost:8082"))
-                                .route("r_ui", r -> r.path("/Accueil")
+                                .route("r_ui", r -> r
+                                                .path("/Accueil", "/AjouterPatient", "/AddPatient", "/MAJPatient/**",
+                                                                "/UpdatePatient/**")
                                                 .uri("http://localhost:9090"))
                                 .build();
         }
+
 }

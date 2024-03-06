@@ -3,15 +3,16 @@ package com.openclassrooms.frontservice.proxies;
 import java.util.List;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import com.openclassrooms.frontservice.beans.PatientBean;
 
-@FeignClient(name = "microservice-gateway", url = "localhost:8888")
+import jakarta.validation.Valid;
+
+@FeignClient(name = "microservice-patient", url = "localhost:8082")
 public interface MicroservicePatientProxy {
 
     @GetMapping(value = "/Patients")
@@ -27,6 +28,9 @@ public interface MicroservicePatientProxy {
     List<PatientBean> recupererUnPatientByName(@PathVariable("name") String name);
 
     @PostMapping(value = "/AddPatient")
-    ResponseEntity<PatientBean> addPerson(@RequestBody PatientBean patient);
+    PatientBean addPerson(@Valid PatientBean patient);
+
+    @PutMapping(value = "/UpdatePatient")
+    PatientBean majPerson(@Valid PatientBean patient);
 
 }
